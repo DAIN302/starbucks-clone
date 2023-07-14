@@ -44,6 +44,9 @@
      <!--GSAP & ScrollToPlugin-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
+    <!--Swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
     <!--Lodash : 스크롤 이벤트 관련 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
@@ -375,6 +378,107 @@
         </div>
       </div>
     </header>
-
+    <!-- 비쥬얼 -->
+    <section class="visual">
+      <div class="inner">
+        <div class="title fade-in">
+          <img src="./images/visual_title.png" alt="title">
+          <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a>
+        </div>
+        <div class="fade-in">
+          <img src="./images/visual_cup1.png" alt="오트밀라떼" class="cup1 image">
+          <img src="./images/visual_cup1_text.png" alt="오트밀라떼" class="cup1 text">
+        </div>
+        <div class="fade-in">
+          <img src="./images/visual_cup2.png" alt="카라멜크럼블" class="cup2 image">
+          <img src="./images/visual_cup2_text.png" alt="카라멜크럼블" class="cup2 text">
+        </div>
+        <div class="fade-in">
+          <img src="./images/visual_spoon.png" alt="스푼" class="spoon">
+        </div>
+      </div>
+    </section>
+    <!-- 공지사항 -->
+    <section class="notice">
+      <div class="notice-line">
+        <div class="bg-left bg"></div>
+        <div class="bg-right bg"></div>
+        <div class="inner">
+          <div class="inner__left">
+            <h2>공지사항</h2>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)">크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)">[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)">스타벅스커피 코리아 애플리케이션 버전 업데이트 안내</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)">[당첨자 발표] 뉴이어 전자영수증 이벤트</a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="notice-line__more">
+              <div class="material-icons">add_circle</div>
+            </a>
+          </div>
+          <div class="inner__right">
+            <h2>스타벅스 프로모션</h2>
+            <div class="toggle-promotion">
+              <div class="material-icons">upload</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="promotion">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/promotion_slide1.jpg" alt="slide">
+              <a href="#" class="btn">자세히 보기</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/promotion_slide2.jpg" alt="slide">
+              <a href="#" class="btn">자세히 보기</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/promotion_slide3.jpg" alt="slide">
+              <a href="#" class="btn">자세히 보기</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/promotion_slide4.jpg" alt="slide">
+              <a href="#" class="btn">자세히 보기</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/promotion_slide5.jpg" alt="slide">
+              <a href="#" class="btn">자세히 보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-prev">
+          <div class="material-icons">arrow_back</div>
+        </div>
+        <div class="swiper-next">
+          <div class="material-icons">arrow_forward</div>
+        </div>
+      </div>
+    </section>
+    <!-- Rewards -->
+    <section class="rewards">
+      <div class="bg-left"></div>
+      <div class="bg-right"></div>
+      <div class="inner">
+        <div class="btn-group">
+          <div class="btn btn--reverse sign-up">회원가입</div>
+          <div class="btn sign-in">로그인</div>
+          <div class="btn gift">e-Gift 선물하기</div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
