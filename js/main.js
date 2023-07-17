@@ -17,8 +17,10 @@ window.addEventListener("DOMContentLoaded",()=>{
         searchInputEl.setAttribute('placeholder', '')
     })
 
-    // 뱃지
+    // 배지
     const badgeEl = document.querySelector("header .badges");
+
+    const toTopEl = document.querySelector("#to-top");
 
     window.addEventListener('scroll', _.throttle(function(){
         // gsap을 이용한 스크롤 배지 애니메이션
@@ -30,6 +32,10 @@ window.addEventListener("DOMContentLoaded",()=>{
                 opacity : 0,
                 display : "none"
             });
+            // 상단이동 버튼 보이기
+            gsap.to(toTopEl, .2, {
+                x : 0
+            })
         }
         else {
             // 배지 보이기
@@ -37,11 +43,23 @@ window.addEventListener("DOMContentLoaded",()=>{
                 opacity : 1,
                 display : "block"
             });
+
+            // 상단이동 버튼 숨기기
+            gsap.to(toTopEl, .2, {
+                x : 100,
+            })
         }
     }, 300));
 
     // _.throttle(함수, 시간)
     // 스크롤이 될때마다 함수가 호출되면 부하가 오므로 이를 방지하기 위한 라이브러리
+
+    // 상단이동 기능
+    toTopEl.addEventListener('click', function(){
+        gsap.to(window, .7, {
+            scrollTo : 0
+        });
+    })
 
     // 비쥬얼
     const fadeEls = document.querySelectorAll(".visual .fade-in");
@@ -79,6 +97,18 @@ window.addEventListener("DOMContentLoaded",()=>{
         }
     })
 
+    // awards
+    new Swiper('.awards .swiper-container', {
+        autoplay : true,
+        loop : true,
+        spaceBetween : 30,
+        slidesPerView : 5, 
+        navigation : {
+            prevEl : '.awards .swiper-prev',
+            nextEl : '.awards .swiper-next'
+        }
+    })
+
     // 슬라이드 토글 기능
     const promotionEl = document.querySelector(".promotion")
     const promotionToggleBtn = document.querySelector('.toggle-promotion')
@@ -98,5 +128,41 @@ window.addEventListener("DOMContentLoaded",()=>{
         }
     })
 
+    // 범위 랜덤 함수(소수점 2자리까지)
+    function random(min, max) {
+    // `.toFixed()`를 통해 반환된 문자 데이터를,
+    // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+    return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+    }
+
+    // 아이콘 애니메이션
+    function floatingObj(sel, delay, size){
+        // gsap.to(요소, 시간, 옵션)
+        gsap.to(sel, random(1.5, 2.5), {
+            y : size, // y축 이동
+            repeat : -1, // -1 무한반복
+            yoyo : true, // 재생된 애니메이션 뒤로 재생
+            ease : Power1.easeInOut, // 이징함수
+            delay : random(0, delay), // 지연시간 옵션 지정한 시간 뒤에 애니메이션 작동
+        });
+    }
+
+    floatingObj('.floating1', 1, 15)
+    floatingObj('.floating2', .5, 15)
+    floatingObj('.floating3', 1.5, 20)
+
+    // 스크롤 애니메이션
+    const spyEls = document.querySelectorAll("section.scroll-spy")
+    spyEls.forEach(spyEl => {
+        new ScrollMagic.Scene({
+            triggerElement : spyEl, // 보여짐 여부를 감시할 요소 지정
+            triggerHook : .8 // 내가 감시하고 있는 요소가 뷰포트에 어느 부분에 와있는지 지정
+        }).setClassToggle(spyEl, 'show')
+        .addTo(new ScrollMagic.Controller());
+    })
+
+    // copyright 부분에 현재 년도 적용 
+    const thisYear = document.querySelector(".this-year");
+    thisYear.textContent = new Date().getFullYear();
 
 }) // 로드구역

@@ -47,8 +47,11 @@
     <!--Swiper-->
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+    <!--ScrollMagic-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <!--Lodash : 스크롤 이벤트 관련 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+    <script defer src="./js/youtube.js"></script>
     <script src="./js/main.js"></script>
   </head>
   <body>
@@ -480,5 +483,161 @@
         </div>
       </div>
     </section>
+    <!-- youtube video -->
+    <section class="youtube">
+      <div class="youtube__area">
+        <div id="player"></div>
+      </div>
+      <div class="youtube__cover"></div>
+      <div class="inner">
+        <img src="./images/floating1.png" alt="icon" class="floating floating1" />
+        <img src="./images/floating2.png" alt="icon" class="floating floating2" />
+      </div>
+    </section>
+    <!-- season product -->
+    <section class="season-product scroll-spy">
+      <div class="inner">
+        <img src="./images/floating3.png" alt="icon" class="floating floating3" />
+        <img src="./images/season_product_image.png" alt="시즌제품" class="product back-to-position to-right delay-0" />
+        <div class="text-group">
+          <img src="./images/season_product_text1.png" alt="시즌제품" class="title back-to-position to-left delay-1">
+          <img src="./images/season_product_text2.png" alt="시즌제품" class="desc back-to-position to-left delay-2">
+          <div class="more back-to-position to-left delay-3">
+            <a href="#" class="btn">자세히보기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- reserve coffee -->
+    <section class="reserve-coffee scroll-spy">
+      <div class="inner">
+        <img src="./images/reserve_logo.png" alt="리저브커피 로고" class="reserve-logo back-to-position to-right delay-0">
+        <div class="text-group">
+          <img src="./images/reserve_text.png" alt="" class="desc back-to-position to-right delay-1">
+          <div class="more back-to-position to-right delay-2">
+            <a href="#" class="btn btn--gold">자세히 보기</a>
+          </div>
+        </div>
+        <img src="./images/reserve_image.png" alt="리저브커피 이미지" class="product back-to-position to-left delay-3">
+      </div>
+    </section>
+    <!-- favorite -->
+    <section class="favorite scroll-spy">
+      <div class="inner">
+        <div class="text-group">
+          <img src="./images/favorite_text1.png" alt="favorite" class="title back-to-position to-right delay-0">
+          <img src="./images/favorite_text2.png" alt="favorite" class="desc back-to-position to-right delay-1">
+          <div class="more back-to-position to-right delay-2">
+            <a href="#" class="btn btn--white">자세히 보기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- reserve store -->
+    <section class="reserve-store">
+      <div class="inner">
+        <div class="medal">
+          <div class="front">
+            <img src="./images/reserve_store_medal_front.png" alt="medal" />
+          </div>
+          <div class="back">
+            <img src="./images/reserve_store_medal_back.png" alt="medal" />
+            <a href="#" class="btn">매장안내</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- find store -->
+    <section class="find-store scroll-spy">
+      <div class="inner">
+        <img src="./images/find_store_texture1.png" alt="find-store" class="texture texture1">
+        <img src="./images/find_store_texture2.png" alt="find-store" class="texture texture2">
+        <img src="./images/find_store_picture1.jpg" alt="find-store" class="picture picture1 back-to-position to-right delay-0">
+        <img src="./images/find_store_picture2.jpg" alt="find-store" class="picture picture2 back-to-position to-right delay-1">
+        <div class="text-group">
+          <img src="./images/find_store_text1.png" alt="find-store" class="title back-to-position to-left delay-0">
+          <img src="./images/find_store_text2.png" alt="find-store" class="desc back-to-position to-left delay-1">
+          <div class="more back-to-position to-left delay-2">
+            <a href="#" class="btn">매장찾기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- awards -->
+    <section class="awards">
+      <div class="inner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/awards_slide1.jpg" alt="awards">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide2.jpg" alt="awards">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide3.jpg" alt="awards">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide4.jpg" alt="awards">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide5.jpg" alt="awards">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide6.jpg" alt="awards">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide7.jpg" alt="awards">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide8.jpg" alt="awards">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide9.jpg" alt="awards">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide10.jpg" alt="awards">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-prev">
+          <div class="material-icons">arrow_back</div>
+        </div>
+        <div class="swiper-next">
+          <div class="material-icons">arrow_forward</div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="inner">
+        <ul class="menu">
+          <li><a href="#" class="green">개인정보처리방침</a></li>
+          <li><a href="#">영상정보처리기기 운영관리 방침</a></li>
+          <li><a href="#">홈페이지 이용약관</a></li>
+          <li><a href="#">위치정보 이용약관</a></li>
+          <li><a href="#">스타벅스 카드 이용약관</a></li>
+          <li><a href="#">윤리경영 핫라인</a></li>
+        </ul>
+        <div class="btn-group">
+          <a href="#" class="btn btn--white">찾아오시는 길</a>
+          <a href="#" class="btn btn--white">신규입점제의</a>
+          <a href="#" class="btn btn--white">사이트맵</a>
+        </div>
+        <div class="info">
+          <span>사업자등록번호 201-81-21515</span>
+          <span>(주)스타벅스 코리아 대표이사 이석구</span>
+          <span>TEL : 02) 3015-1100 / FAX : 02) 3015-1106</span>
+          <span>개인정보 책임자 : 강기원</span>          
+        </div>
+        <p class="copyright">
+          &copy; <span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.
+        </p>
+        <img src="./images/starbucks_logo_only_text.png" alt="STAR BUCKS" class="logo" />
+      </div>
+    </footer>
+    <div id="to-top">
+      <div class="material-icons">arrow_upward</div>
+    </div>
   </body>
 </html>
