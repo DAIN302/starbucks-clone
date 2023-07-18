@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url(common.css);
+
 header .badges {
     position: absolute;
     top: 132px;
